@@ -7,7 +7,7 @@ import compressor from "astro-compressor";
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: "https://screwfast.uk",
+  site: "https://sinarbejoprecast.com",
   image: {
     domains: ["images.unsplash.com"],
   },
@@ -17,7 +17,7 @@ export default defineConfig({
     tailwind(),
     sitemap({
       i18n: {
-        defaultLocale: "id", // All urls that don't contain `fr` after `https://screwfast.uk/` will be treated as default locale, i.e. `en`
+        defaultLocale: "id", // All urls that don't contain `fr` after `https://sinarbejoprecast.com/` will be treated as default locale, i.e. `en`
         locales: {
           id: "id", // The `defaultLocale` value must present in `locales` keys
         },
