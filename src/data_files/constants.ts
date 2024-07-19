@@ -2,11 +2,11 @@ import ogImageSrc from "@images/social.png";
 
 export const SITE = {
   title: "SinarBejoPrecast",
-  tagline: "Top-quality Hardware Tools",
-  description: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
-  description_short: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
-  url: "https://screwfast.uk",
-  author: "Emil Gulamov",
+  tagline: "Beton Precast Berkualitas",
+  description: "SinarBejoPrecast menyediakan beton pracetak bangunan dengan kualitas yang bersaing untuk kebutuhan beton konstruksi. Hubungi kami untuk pertanyaan lebih lanjut.",
+  description_short: "SinarBejoPrecast menyediakan beton pracetak bangunan dengan kualitas yang bersaing untuk kebutuhan beton konstruksi.",
+  url: "https://sinarbejoprecast.com",
+  author: "LARE OSING NDO",
 };
 
 export const SEO = {
@@ -15,7 +15,7 @@ export const SEO = {
   structuredData: {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    inLanguage: "en-US",
+    inLanguage: "id-ID",
     "@id": SITE.url,
     url: SITE.url,
     name: SITE.title,
@@ -30,10 +30,10 @@ export const SEO = {
 };
 
 export const OG = {
-  locale: "en_US",
+  locale: "id-ID",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
-  description: "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
+  title: `${SITE.title}: :  Beton Precast Berkualitas`,
+  description: "Ayo, pesan beton precast dari SinarBejoPrecast untuk beton berkualitas terpercaya di proyek anda.",
   image: ogImageSrc,
 };

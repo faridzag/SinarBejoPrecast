@@ -51,7 +51,7 @@ const fullPath: string = Astro.url.pathname;
 const alternateLanguageLinks: string = Object.entries(languages)
   .map(([lang, prefix]: [string, string]) => {
     const basePath: string =
-      lang === "en" ? fullPath.replace(/^\/fr\//, "/") : fullPath;
+      lang === "id" ? fullPath.replace(/^\/fr\//, "/") : fullPath;
 
     const href: string = createHref(lang, prefix, basePath);
 

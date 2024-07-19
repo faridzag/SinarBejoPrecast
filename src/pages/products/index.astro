@@ -21,16 +21,16 @@ const product: CollectionEntry<"products">[] = (
 );
 
 // Define variables for page content
-const title: string = "Products";
+const title: string = "Produk";
 const subTitle: string =
-  "Explore the durability and precision of ScrewFast tools, designed for both professionals and enthusiasts. Each of our products is crafted with precision and built to last, ensuring you have the right tool for every job.";
+  "Temukan katalog produk untuk kebutuhan proyek anda.";
 
 // Testimonial data that will be rendered in the component
 const testimonials = [
   // First testimonial data
   {
     content:
-      " \"Since switching to ScrewFast's hardware tools, the efficiency on our construction sites has skyrocketed. The durability of the hex bolts and precision of the machine screws are simply unmatched. It's refreshing to work with a company that truly understands the daily demands of the industry.\" ",
+      " \"Proin at vestibulum velit. Nulla facilisi. Ut sit amet rutrum ipsum, elementum pretium sem. Fusce volutpat, magna a tincidunt suscipit, est elit posuere quam, ut aliquet velit elit vitae metus.\" ",
     author: "Jason Clark",
     role: "Site Foreman | TopBuild",
     avatarSrc:
@@ -40,7 +40,7 @@ const testimonials = [
   // Second testimonial data
   {
     content:
-      " \"As an interior designer, I'm always looking for high-quality materials and tools that help bring my visions to life. ScrewFast's mixed screws assortment has been a game-changer for my projects, providing the perfect blend of quality and variety. The outstanding customer support was just the cherry on top!\" ",
+      " \"Proin at vestibulum velit. Nulla facilisi. Ut sit amet rutrum ipsum, elementum pretium sem. Fusce volutpat, magna a tincidunt suscipit, est elit posuere quam, ut aliquet velit elit vitae metus.\" ",
     author: "Maria Gonzalez",
     role: "Interior Designer | Creative Spaces",
     avatarSrc:
@@ -50,7 +50,7 @@ const testimonials = [
   // Third testimonial data
   {
     content:
-      " \"I’ve been a professional carpenter for over 15 years, and I can sincerely say that ScrewFast’s tap bolts and nuts are some of the best I've used. They grip like no other, and I have full confidence in every joint and fixture. Plus, the service is impeccable – they truly care about my project's success.\" ",
+      " \"Proin at vestibulum velit. Nulla facilisi. Ut sit amet rutrum ipsum, elementum pretium sem. Fusce volutpat, magna a tincidunt suscipit, est elit posuere quam, ut aliquet velit elit vitae metus.\" ",
     author: "Richard Kim",
     role: "Master Carpenter | WoodWright",
     avatarSrc:
@@ -98,7 +98,7 @@ const pageTitle: string = `Products | ${SITE.title}`;
           )
         }
       </div>
-      <PrimaryCTA title="Customer Stories" url="#testimonials" noArrow={true} />
+      <PrimaryCTA title="Cerita Pelanggan" url="#testimonials" noArrow={true} />
     </div>
     <!--Displaying products in alternating styles. Alternative product gets different card styling.-->
     <!--Maps through all product entries and displays them with either CardSmall or CardWide based on their position.-->
@@ -117,17 +117,17 @@ const pageTitle: string = `Products | ${SITE.title}`;
   </div>
   <!--Features statistics section-->
   <FeaturesStatsAlt
-    title="Why Choose ScrewFast?"
-    subTitle="Transform your ideas into tangible results with ScrewFast tools. Whether you're starting with a sketch on a napkin or diving into a comprehensive construction project, our tools are engineered to help you build with confidence."
+    title="Kenapa Memilih Beton SinarBejoPrecast?"
+    subTitle="Kami menyediakan beton pracetak berkualitas untuk memenuhi kebutuhan sektor proyek konstruksi. Dari pembuatan dengan metode mutakhir hingga layanan ahli, kami berdedikasi untuk menyediakan bahan berkualitas bagi anda."
     benefits={[
-      "Robust and reliable tools for long-lasting performance.",
-      "Innovative solutions tailored to modern construction needs.",
-      "Customer support dedicated to your project's success.",
+      "Beton Pracetak Bermutu.",
+      "Pesanan sesuai Kebutuhan Proyek Anda",
+      "Layanan tersedia 24-jam",
     ]}
   />
   <!--Testimonials section-->
   <TestimonialsSectionAlt
-    title="What Our Customers Say"
+    title="Apa yang dikatakan pelanggan kami"
     testimonials={testimonials}
   />
 </MainLayout>

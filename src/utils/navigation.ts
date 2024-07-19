@@ -3,7 +3,6 @@ const navBarLinks = [
   { name: "Home", url: "/" },
   { name: "Produk", url: "/products" },
   { name: "Layanan", url: "/services" },
-  // { name: "Blog", url: "/blog" },
   { name: "Kontak", url: "/contact" },
 ];
 // An array of links for footer
@@ -20,6 +19,7 @@ const footerLinks = [
     section: "Perusahaan",
     links: [
       { name: "Tentang kami", url: "#" },
+      { name: "Alamat", url: "#" },
     ],
   },
 ];
