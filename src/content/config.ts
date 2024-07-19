@@ -58,18 +58,6 @@ const productsCollection = defineCollection({
   }),
 });
 
-const insightsCollection = defineCollection({
-  type: "content",
-  schema: ({ image }) => z.object ({
-  title: z.string(),
-  description: z.string(),
-  // contents: z.array(z.string()),
-  cardImage: image(),
-  cardImageAlt: z.string(),
-  }),
-});
-
 export const collections = {
   'products': productsCollection,
-  'insights': insightsCollection,
 };
