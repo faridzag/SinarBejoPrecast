@@ -8,11 +8,11 @@ import { getCollection } from "astro:content";
 import { SITE } from "@data/constants";
 
 // Global declaration for gsap animation library
-declare global {
-  interface Window {
-    gsap: any;
-  }
-}
+// declare global {
+//   interface Window {
+//     gsap: any;
+//   }
+// }
 // This gets the static paths for all the unique products
 export async function getStaticPaths() {
   const productEntries = await getCollection("products");
@@ -28,15 +28,14 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
 ---
 
 <MainLayout title={pageTitle}>
-  <div id="overlay" class="fixed inset-0 bg-neutral-200 dark:bg-neutral-800">
-  </div>
+  <!-- <div id="overlay" class="fixed inset-0 bg-neutral-200 dark:bg-neutral-800">
+  </div> -->
 
   <section
     class="mx-auto flex max-w-[85rem] flex-col px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
   >
     <div>
       <p
-        id="fadeText"
         class="mb-8 max-w-prose text-pretty font-light text-neutral-700 dark:text-neutral-300 sm:text-xl"
       >
         {product.data.main.content}
@@ -45,7 +44,7 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
     <div
       class="flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0"
     >
-      <div id="fadeInUp">
+      <div>
         <h1
           class="block text-4xl font-bold tracking-tighter text-neutral-800 dark:text-neutral-200 sm:text-5xl md:text-6xl lg:text-7xl"
         >
@@ -57,7 +56,6 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
       </div>
       <div>
         <Image
-          id="fadeInMoveRight"
           src={product.data.main.imgMain}
           class="w-[600px]"
           alt={product.data.main.imgAlt}
@@ -244,7 +242,7 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
   </div>
 </MainLayout>
 
-<script>
+<!-- <script>
   import { gsap } from "gsap";
 
   type AnimationSettings = {
@@ -302,7 +300,7 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
   );
 
   timeline.to("#overlay", { duration: 1, autoAlpha: 0, delay: 0.2 });
-</script>
+</script> -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     function setButtonInactive(btn: any, activeButton: any) {

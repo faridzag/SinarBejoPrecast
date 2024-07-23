@@ -1,0 +1,43 @@
+---
+export const partial = true;
+
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { SITE } from "@data/constants";
+import CardSmall from "@components/ui/cards/CardSmall.astro";
+import CardWide from "@components/ui/cards/CardWide.astro";
+
+// Fetching all the product related content and sorting it by main.id
+const products: CollectionEntry<"products">[] = (
+  await getCollection("products")
+).sort(
+  (a: CollectionEntry<"products">, b: CollectionEntry<"products">) =>
+    a.data.main.id - b.data.main.id,
+);
+
+const { idproduct } = Astro.params;
+
+
+console.log(idproduct);
+---
+
+{
+  products.map((product, index) => {
+    // const position = index % 4;
+    // if (position === 0 || position === 3) {
+    //   return <CardSmall hx-get=`/partials/product/${position}` hx-trigger="revealed" hx-swap="afterend"  product={product} />;
+    // } else {
+    //   return <CardWide hx-get=`/partials/product/${position}` hx-trigger="revealed" hx-swap="afterend" product={product} />;
+    // }
+
+
+
+    if (index==Number(idproduct)) {
+      const id = Number(idproduct)+1;
+      return <div hx-get=`/partials/product/${id}` hx-trigger="intersect once" hx-swap="afterend" ><CardSmall product={product} /></div>
+
+    }
+
+    
+  })
+}

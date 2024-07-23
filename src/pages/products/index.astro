@@ -4,7 +4,6 @@ import MainLayout from "@/layouts/MainLayout.astro";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import CardSmall from "@components/ui/cards/CardSmall.astro";
 import CardWide from "@components/ui/cards/CardWide.astro";
-import FeaturesStatsAlt from "@components/sections/features/FeaturesStatsAlt.astro";
 import TestimonialsSectionAlt from "@components/sections/testimonials/TestimonialsSectionAlt.astro";
 
 // Importing necessary functions from Astro
@@ -22,15 +21,15 @@ const product: CollectionEntry<"products">[] = (
 
 // Define variables for page content
 const title: string = "Produk";
-const subTitle: string =
-  "Temukan katalog produk untuk kebutuhan proyek anda.";
+const subTitle: string = "Temukan katalog produk untuk kebutuhan proyek anda.";
+
 
 // Testimonial data that will be rendered in the component
 const testimonials = [
   // First testimonial data
   {
     content:
-      " \"Proin at vestibulum velit. Nulla facilisi. Ut sit amet rutrum ipsum, elementum pretium sem. Fusce volutpat, magna a tincidunt suscipit, est elit posuere quam, ut aliquet velit elit vitae metus.\" ",
+      ' "Proin at vestibulum velit. Nulla facilisi. Ut sit amet rutrum ipsum, elementum pretium sem. Fusce volutpat, magna a tincidunt suscipit, est elit posuere quam, ut aliquet velit elit vitae metus." ',
     author: "Jason Clark",
     role: "Site Foreman | TopBuild",
     avatarSrc:
@@ -40,7 +39,7 @@ const testimonials = [
   // Second testimonial data
   {
     content:
-      " \"Proin at vestibulum velit. Nulla facilisi. Ut sit amet rutrum ipsum, elementum pretium sem. Fusce volutpat, magna a tincidunt suscipit, est elit posuere quam, ut aliquet velit elit vitae metus.\" ",
+      ' "Proin at vestibulum velit. Nulla facilisi. Ut sit amet rutrum ipsum, elementum pretium sem. Fusce volutpat, magna a tincidunt suscipit, est elit posuere quam, ut aliquet velit elit vitae metus." ',
     author: "Maria Gonzalez",
     role: "Interior Designer | Creative Spaces",
     avatarSrc:
@@ -50,7 +49,7 @@ const testimonials = [
   // Third testimonial data
   {
     content:
-      " \"Proin at vestibulum velit. Nulla facilisi. Ut sit amet rutrum ipsum, elementum pretium sem. Fusce volutpat, magna a tincidunt suscipit, est elit posuere quam, ut aliquet velit elit vitae metus.\" ",
+      ' "Proin at vestibulum velit. Nulla facilisi. Ut sit amet rutrum ipsum, elementum pretium sem. Fusce volutpat, magna a tincidunt suscipit, est elit posuere quam, ut aliquet velit elit vitae metus." ',
     author: "Richard Kim",
     role: "Master Carpenter | WoodWright",
     avatarSrc:
@@ -68,16 +67,18 @@ const pageTitle: string = `Products | ${SITE.title}`;
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": "https://sinarbejoprecast.com/products",
-    "url": "https://sinarbejoprecast.com/products",
-    "name": "Hardware Tools | ScrewFast",
-    "description": "Explore the durability and precision of ScrewFast tools, designed for both professionals and enthusiasts.",
-    "isPartOf": {
+    url: "https://sinarbejoprecast.com/products",
+    name: "Hardware Tools | ScrewFast",
+    description:
+      "Explore the durability and precision of ScrewFast tools, designed for both professionals and enthusiasts.",
+    isPartOf: {
       "@type": "WebSite",
-      "url": "https://sinarbejoprecast.com",
-      "name": "ScrewFast",
-      "description": "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs."
+      url: "https://sinarbejoprecast.com",
+      name: "ScrewFast",
+      description:
+        "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
     },
-    "inLanguage": "id-ID"
+    inLanguage: "id-ID",
   }}
 >
   <div
@@ -98,33 +99,32 @@ const pageTitle: string = `Products | ${SITE.title}`;
           )
         }
       </div>
-      <PrimaryCTA title="Cerita Pelanggan" url="#testimonials" noArrow={true} />
+      <PrimaryCTA title="Semua Produk" url="#testimonials" noArrow={true} />
     </div>
     <!--Displaying products in alternating styles. Alternative product gets different card styling.-->
     <!--Maps through all product entries and displays them with either CardSmall or CardWide based on their position.-->
-    <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
-      {
+    <section class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 xl:gap-8">
+      <!-- {
         product.map((product, index) => {
           const position = index % 4;
-          if (position === 0 || position === 3) {
-            return <CardSmall product={product} />;
-          } else {
-            return <CardWide product={product} />;
-          }
+            if (position === 0 || position === 3) {
+              return <CardSmall product={product} />;
+            } else {
+              return <CardWide product={product} />;
+            }
         })
-      }
+      } -->
+
+      <div 
+      hx-target="this"
+        hx-get="/partials/product/0"
+        hx-trigger="intersect once"
+        hx-swap="outerHtml"
+      >
+      </div>
     </section>
   </div>
-  <!--Features statistics section-->
-  <FeaturesStatsAlt
-    title="Kenapa Memilih Beton SinarBejoPrecast?"
-    subTitle="Kami menyediakan beton pracetak berkualitas untuk memenuhi kebutuhan sektor proyek konstruksi. Dari pembuatan dengan metode mutakhir hingga layanan ahli, kami berdedikasi untuk menyediakan bahan berkualitas bagi anda."
-    benefits={[
-      "Beton Pracetak Bermutu.",
-      "Pesanan sesuai Kebutuhan Proyek Anda",
-      "Layanan tersedia 24-jam",
-    ]}
-  />
+
   <!--Testimonials section-->
   <TestimonialsSectionAlt
     title="Apa yang dikatakan pelanggan kami"

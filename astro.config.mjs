@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import vercelStatic from "@astrojs/vercel/static";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
+import htmx from 'astro-htmx';
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,6 +15,7 @@ export default defineConfig({
 
   prefetch: true,
   integrations: [
+    htmx(),
     tailwind(),
     sitemap({
       i18n: {
@@ -28,10 +30,10 @@ export default defineConfig({
       brotli: true,
     }),
   ],
-  output: "static",
+  output: "server",
   experimental: {
     clientPrerender: true,
     directRenderScript: true,
   },
-  adapter: vercelStatic(),
+  // adapter: vercelStatic(),
 });
