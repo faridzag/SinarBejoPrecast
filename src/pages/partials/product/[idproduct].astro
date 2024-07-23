@@ -8,7 +8,7 @@ import CardSmall from "@components/ui/cards/CardSmall.astro";
 import CardWide from "@components/ui/cards/CardWide.astro";
 
 // Fetching all the product related content and sorting it by main.id
-const products: CollectionEntry<"products">[] = (
+const product: CollectionEntry<"products">[] = (
   await getCollection("products")
 ).sort(
   (a: CollectionEntry<"products">, b: CollectionEntry<"products">) =>
@@ -22,15 +22,15 @@ console.log(idproduct);
 ---
 
 {
-  products.map((product, index) => {
+  product.map((product, index) => {
     // const position = index % 4;
     // if (position === 0 || position === 3) {
     //   return <CardSmall hx-get=`/partials/product/${position}` hx-trigger="revealed" hx-swap="afterend"  product={product} />;
     // } else {
     //   return <CardWide hx-get=`/partials/product/${position}` hx-trigger="revealed" hx-swap="afterend" product={product} />;
     // }
-
-
+    //
+    //
 
     if (index==Number(idproduct)) {
       const id = Number(idproduct)+1;
@@ -38,6 +38,6 @@ console.log(idproduct);
 
     }
 
-    
+
   })
 }
