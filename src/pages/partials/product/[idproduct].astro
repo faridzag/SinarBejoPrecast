@@ -33,11 +33,8 @@ console.log(idproduct);
     //
 
     if (index==Number(idproduct)) {
-      const id = Number(idproduct)+1;
-      return <div hx-get=`/partials/product/${id}` hx-trigger="intersect once" hx-swap="afterend" ><CardSmall product={product} /></div>
-
+      return <div hx-get=`/partials/product/${index + 1}` hx-trigger="intersect once" hx-swap="afterend" ><CardSmall product={product} /></div>
     }
-
 
   })
 }
