@@ -60,7 +60,7 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
             </div>
             <div>
                 <Image
-                    src={product.data.main.imgMain}
+                    src={product.data.main.imgMain as any}
                     class="w-[600px]"
                     alt={product.data.main.imgAlt}
                     format={"avif"}
@@ -244,7 +244,7 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
                 {
                     product.data.blueprints.first && (
                         <Image
-                            src={product.data.blueprints.first}
+                            src={product.data.blueprints.first as any}
                             class="h-full w-full object-cover object-center"
                             alt="Blueprint Illustration"
                             format={"avif"}
@@ -257,7 +257,7 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
                 {
                     product.data.blueprints.second && (
                         <Image
-                            src={product.data.blueprints.second}
+                            src={product.data.blueprints.second as any}
                             class="h-full w-full object-cover object-center"
                             alt="Blueprint Illustration"
                             format={"avif"}
