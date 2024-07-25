@@ -56,13 +56,13 @@ interface Props {
   }
     <!-- Action Button Section: This section includes two CTAs with their own styles and URL -->
     <div class="mt-7 grid w-full gap-3 sm:inline-flex">
-      {primaryBtn && 
+      {primaryBtn &&
       <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />
       }
-      {secondaryBtn && 
+      {secondaryBtn &&
       <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />
       }
-    </div>  
+    </div>
 
   </div>
   <!-- Hero Image Section -->
@@ -74,7 +74,7 @@ interface Props {
         alt={alt}
         class="h-full w-full scale-110 object-cover object-center"
         draggable={"false"}
-        loading={"eager"}
+        loading={"lazy"}
         format={"avif"}
 	 />
 	}
