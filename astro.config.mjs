@@ -12,9 +12,9 @@ import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "https://sinarbejoprecast.com",
-  image: {
-    domains: ["images.unsplash.com"]
-  },
+  // image: {
+  //   domains: ["images.unsplash.com"]
+  // },
   prefetch: true,
   integrations: [htmx(), tailwind(), sitemap({
     i18n: {
