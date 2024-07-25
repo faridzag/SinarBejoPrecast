@@ -4,8 +4,9 @@ import vercelStatic from "@astrojs/vercel/static";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import htmx from 'astro-htmx';
-
 import netlify from "@astrojs/netlify";
+
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -34,5 +35,6 @@ export default defineConfig({
   }
   // adapter: vercelStatic(),
   ,
-  adapter: netlify()
+
+  adapter: vercel()
 });
