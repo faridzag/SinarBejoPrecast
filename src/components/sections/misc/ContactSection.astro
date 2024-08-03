@@ -40,20 +40,7 @@ const formSubTitle: string = "Kami akan membalas anda dalam 1-2 hari kerja.";
         <!-- Each field utilizes a different input component for the specific type of input (text, email, phone, and textarea)-->
         <form>
           <div class="grid gap-4">
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <TextInput
-                id="hs-firstname-contacts"
-                label="Nama Depan"
-                name="hs-firstname-contacts"
-              />
-              <TextInput
-                id="hs-lastname-contacts"
-                label="Nama Belakang"
-                name="hs-firstname-contacts"
-              />
-            </div>
             <EmailContactInput id="hs-email-contacts" />
-            <PhoneInput id="hs-phone-number" />
             <TextAreaInput
               id="hs-about-contacts"
               label="Detail pesan"
@@ -81,27 +68,19 @@ const formSubTitle: string = "Kami akan membalas anda dalam 1-2 hari kerja.";
           content="Dapatkan jawaban yang cepat dan jelas atas pertanyaan umum."
           isLinkVisible={true}
           linkTitle="Lihat Pertanyaan Umum"
-          linkURL="#"
+          linkURL="/#faqs"
           isArrowVisible={true}
           ><Icon name="chatBubble" />
         </ContactIconBlock>
 
         <ContactIconBlock
-          heading="Kunjungi Pabrik Kami"
-          content="SinarBejo Precast"
+          heading="Kunjungi Kami"
+          content="CV. SinarBejo"
           isAddressVisible={true}
-          addressContent="Jl. Dimana no42, Banyuwangi"
+          addressContent="Krajan Rt.01 Rw.02 Desa Licin Kec. Licin Kab Banyuwangi"
           ><Icon name="mapPin" />
         </ContactIconBlock>
 
-        <ContactIconBlock
-          heading="Hubungi kami dengan email"
-          content="Kirimkan email kepada kami di"
-          isLinkVisible={true}
-          linkTitle="support@sinarbejoprecast.com"
-          linkURL="#"
-          ><Icon name="envelopeOpen" />
-        </ContactIconBlock>
       </div>
     </div>
   </div>

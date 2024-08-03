@@ -7,6 +7,7 @@ import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { SITE } from "@data/constants";
+import DropDown from "@/components/DropDown.astro";
 
 // Global declaration for gsap animation library
 // declare global {
@@ -102,10 +103,11 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
                                 {product.data.longDeskripsi.subTitle}
                             </p>
                             <p class="mt-5">
-                                <PrimaryCTA
+                                <!-- <PrimaryCTA
                                     title={product.data.longDeskripsi.btnTitle}
                                     url={product.data.longDeskripsi.btnURL}
-                                />
+                                /> -->
+                                <DropDown namaProduk={product.data.title}/>
                             </p>
                         </div>
 
