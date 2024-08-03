@@ -30,6 +30,12 @@ export default {
         500: "#00a693",
         600: "#009688",
       }, // Primary colors, used mainly for links, buttons and svg icons
+      yellow: {
+        50: "#fefce8",
+        100: "#fef9c3",
+        400: "#facc15",
+        500: "#eab308",
+      },
       red: colors.red, // Used for bookmark icon
       zinc: colors.zinc, // Used mainly for box-shadow
     },
