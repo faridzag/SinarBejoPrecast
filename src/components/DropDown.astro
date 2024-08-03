@@ -43,7 +43,7 @@ const {namaProduk} = Astro.props;
 
   // Close the dropdown when clicking outside
   window.addEventListener('click', (event) => {
-    if (!button.contains(event.target) && !menu.contains(event.target)) {
+    if (!button.contains(event.target as Node) && !menu.contains(event.target as Node)) {
       menu.classList.add('hidden');
     }
   });
