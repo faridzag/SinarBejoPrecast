@@ -35,5 +35,5 @@ export default defineConfig({
     directRenderScript: true
   },
   // adapter: vercelStatic(),
-  adapter: vercel()
+  adapter: vercel({functionPerRoute:false})
 });
