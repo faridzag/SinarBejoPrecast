@@ -15,19 +15,20 @@ export default {
       gray: colors.gray,
       indigo: colors.indigo,
       neutral: colors.neutral,  // Used mainly for text color
-      yellow: {
-        50: "#fefce8",
-        100: "#fef9c3",
-        400: "#facc15",
-        500: "#eab308",
+      blue: {
+        50: "#e6f8ff",
+        100: "#ccf1ff",
+        400: "#00b3ff",
+        500: "#0099e6",
       }, // Accent colors, used mainly for star color, heading and buttons
-      orange: {
-        100: "#ffedd5",
-        200: "#fed7aa",
-        300: "#fb713b",
-        400: "#fa5a15",
-        500: "#e14d0b",
-        600: "#ea580c",
+
+      teal: {
+        100: "#e6fffa",
+        200: "#b2f5ea",
+        300: "#00d5c0",
+        400: "#00bfac",
+        500: "#00a693",
+        600: "#009688",
       }, // Primary colors, used mainly for links, buttons and svg icons
       red: colors.red, // Used for bookmark icon
       zinc: colors.zinc, // Used mainly for box-shadow

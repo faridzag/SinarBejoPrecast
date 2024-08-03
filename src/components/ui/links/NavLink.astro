@@ -13,7 +13,7 @@ interface Props {
 Re-usable link component for navigation bar. Highlights the active link
 by comparing the current URL with the href of each link.
 We assign an ID matching the URL for easy reference in our script.
-If URL is '/' (home page), assign ID as 'home' 
+If URL is '/' (home page), assign ID as 'home'
 -->
 <a
   id={url === "/" ? "home" : url.replace("/", "")}
@@ -45,7 +45,7 @@ If URL is '/' (home page), assign ID as 'home'
         "hover:text-neutral-500",
         "dark:hover:text-neutral-500"
       );
-      nav.classList.add("text-orange-400", "dark:text-orange-300");
+      nav.classList.add("text-teal-400", "dark:text-teal-300");
       nav.setAttribute("aria-current", "page");
     }
   });
