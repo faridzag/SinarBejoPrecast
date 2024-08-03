@@ -35,7 +35,7 @@ export default defineConfig({
   }), compressor({
     gzip: false,
     brotli: true
-  }), decapCmsOauth()],
+  }), decapCmsOauth({adminDisabled: true})],
   output: "server",
   experimental: {
     clientPrerender: true,
