@@ -5,6 +5,8 @@ import enStrings from "@utils/navigation.ts";
 import Icon from "@components/ui/icons/Icon.astro";
 import BrandLogo from "@components/BrandLogo.astro";
 import { SITE } from "@data/constants";
+import logoBejo from "@/images/logoBejo.png";
+import { Image } from "astro:assets";
 
 // Select the correct translation based on the page's lang prop:
 const strings = enStrings;
@@ -21,7 +23,11 @@ const crafted: string = "by";
             <div class="col-span-full lg:col-span-1">
                 <!-- Brand Logo -->
                 <!-- <BrandLogo class="h-auto w-32" /> -->
-                <span class="text-xl font-bold dark:text-white">SinarBejo</span>
+                <div class="flex md:flex-col md:items-start md:gap-2 items-center gap-4">
+                    <Image src={logoBejo} alt="SinarBejo" class="h-auto w-24" />
+                    <span class=" text-3xl font-bold dark:text-white"
+                        >SinarBejoPrecast</span>
+                </div>
             </div>
             <!-- An array of links for Product and Company sections -->
             {
