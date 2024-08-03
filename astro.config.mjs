@@ -5,8 +5,9 @@ import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import htmx from "astro-htmx";
 import netlify from "@astrojs/netlify";
-
 import vercel from "@astrojs/vercel/serverless";
+
+import decapCmsOauth from "astro-decap-cms-oauth";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,29 +17,23 @@ export default defineConfig({
   //   domains: ["images.unsplash.com"]
   // },
   prefetch: true,
-  integrations: [
-    htmx(),
-    tailwind(),
-    sitemap({
-      i18n: {
-        defaultLocale: "id",
-        // All urls that don't contain `fr` after `https://sinarbejoprecast.com/` will be treated as default locale, i.e. `en`
-        locales: {
-          id: "id", // The `defaultLocale` value must present in `locales` keys
-        },
-      },
-    }),
-    compressor({
-      gzip: false,
-      brotli: true,
-    }),
-  ],
+  integrations: [htmx(), tailwind(), sitemap({
+    i18n: {
+      defaultLocale: "id",
+      // All urls that don't contain `fr` after `https://sinarbejoprecast.com/` will be treated as default locale, i.e. `en`
+      locales: {
+        id: "id" // The `defaultLocale` value must present in `locales` keys
+      }
+    }
+  }), compressor({
+    gzip: false,
+    brotli: true
+  }), decapCmsOauth()],
   output: "server",
   experimental: {
     clientPrerender: true,
-    directRenderScript: true,
+    directRenderScript: true
   },
   // adapter: vercelStatic(),
-  adapter: vercel(),
+  adapter: vercel()
 });
-

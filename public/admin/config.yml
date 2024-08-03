@@ -1,0 +1,93 @@
+backend:
+  name: github
+  branch: main # change this to your branch
+  repo: AgungBahtiarr/SinarBejoPrecast # change this to your repo
+  site_domain: astro-decap-cms-oauth.vercel.app # change this to your domain
+  base_url: https://astro-decap-cms-oauth.vercel.app # change this to your prod URL
+  auth_endpoint: oauth # the oauth route provided by the integration
+
+media_folder: "src/images"
+public_folder: "/images"
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "src/content/products"
+    create: true
+    fields:
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "string" }
+      - label: "Main"
+        name: "main"
+        widget: "object"
+        fields:
+          - { label: "ID", name: "id", widget: "number" }
+          - { label: "Content", name: "content", widget: "string" }
+          - { label: "Card Image", name: "imgCard", widget: "image" }
+          - { label: "Main Image", name: "imgMain", widget: "image" }
+          - { label: "Image Alt Text", name: "imgAlt", widget: "string" }
+      - label: "Tabs"
+        name: "tabs"
+        widget: "list"
+        fields:
+          - { label: "ID", name: "id", widget: "string" }
+          - { label: "Data Tab", name: "dataTab", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+      - label: "Deskripsi Panjang"
+        name: "longDeskripsi"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subTitle", widget: "string" }
+          - { label: "Button Title", name: "btnTitle", widget: "string" }
+          - { label: "Button URL", name: "btnURL", widget: "string" }
+      - label: "List Deskripsi"
+        name: "descriptionList"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subTitle", widget: "string" }
+      - label: "Specification Left"
+        name: "spesifikasiLeft"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subTitle", widget: "string" }
+      - label: "Specification Right"
+        name: "spesifikasiRight"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subTitle", widget: "string" }
+      - label: "Table Data"
+        name: "tableData"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Features", name: "feature", widget: "list" }
+          - label: "Descriptions"
+            name: "description"
+            widget: "list"
+            field:
+              {
+                label: "Description Item",
+                name: "descriptionItem",
+                widget: "list",
+              }
+      - label: "Blueprints"
+        name: "blueprints"
+        widget: "object"
+        fields:
+          - {
+              label: "First Blueprint",
+              name: "first",
+              widget: "image",
+              required: false,
+            }
+          - {
+              label: "Second Blueprint",
+              name: "second",
+              widget: "image",
+              required: false,
+            }
