@@ -20,6 +20,7 @@ collections:
       - label: "Main"
         name: "main"
         widget: "object"
+        allow_add: true
         fields:
           - { label: "ID", name: "id", widget: "number" }
           - { label: "Content", name: "content", widget: "string" }
@@ -30,9 +31,13 @@ collections:
         name: "tabs"
         widget: "list"
         fields:
-          - { label: "ID", name: "id", widget: "string" }
-          - { label: "Data Tab", name: "dataTab", widget: "string" }
-          - { label: "Title", name: "title", widget: "string" }
+          - { label: "ID", name: "id", widget: "string" , }
+          - { label: "Data Tab", name: "dataTab", widget: "string", }
+          - { label: "Title", name: "title", widget: "string",  }
+        default:
+          - {id: "tabs-with-card-item-1",dataTab: "#tabs-with-card-1", title: "Deskripsi"}
+          - {id: "tabs-with-card-item-2",dataTab: "#tabs-with-card-2", title: "Spesifikasi"}
+          - {id: "tabs-with-card-item-3",dataTab: "#tabs-with-card-3", title: "Blueprints"}
       - label: "Deskripsi Panjang"
         name: "longDeskripsi"
         widget: "object"
