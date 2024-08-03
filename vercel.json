@@ -34,10 +34,6 @@
         {
           "key": "Strict-Transport-Security",
           "value": "max-age=31536000; includeSubDomains; preload"
-        },
-        {
-          "key": "Content-Security-Policy",
-          "value": "script-src 'self' 'nonce-randomstring' 'unsafe-eval' https://unpkg.com;"
         }
       ]
     }
