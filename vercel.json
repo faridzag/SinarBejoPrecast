@@ -37,7 +37,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "script-src 'self' 'unsafe-inline' 'unsafe-eval' unpkg.com;"
+          "value": "script-src 'self' 'nonce-randomstring' 'unsafe-eval' https://unpkg.com;"
         }
       ]
     }
