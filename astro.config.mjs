@@ -11,6 +11,13 @@ import decapCmsOauth from "astro-decap-cms-oauth";
 
 // https://astro.build/config
 export default defineConfig({
+  security: {
+    contentSecurityPolicy: {
+      directives: {
+        "script-src": ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https://unpkg.com"],
+      },
+    },
+  },
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "https://sinarbejoprecast.vercel.app",
   // image: {
